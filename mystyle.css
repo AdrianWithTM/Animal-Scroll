@@ -224,7 +224,7 @@ input:hover {
     }
 
     .title{
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .pic{
@@ -260,7 +260,7 @@ input:hover {
   @media (height < 800px) {
 
     .title{
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .sidebar1{
