@@ -152,7 +152,6 @@ function autoScroll() {
     if(on === false){
         on = true;
         blocker = true;
-        console.log("Blocker true");
         lever.style.color = "white";
         lever.style.background = "hsl(187, 100%, 47%)";
         lever.innerHTML = "Auto Scroll: on";
@@ -186,7 +185,6 @@ function autoScroll() {
     } else {
         on = false;
         blocker = false;
-        console.log("Blocker false");
         lever.style.color = "lightgray";
         lever.style.background = "hsl(187, 100%, 39%)";
         lever.innerHTML = "Auto Scroll: off";
