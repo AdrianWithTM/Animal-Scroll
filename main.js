@@ -98,7 +98,7 @@ function autoScroll() {
                 fetchCatData();
                 which = 0;
             }
-        }, 5000);
+        }, 4000);
     }else{
         on = false;
         lever.style.color = "lightgray";
