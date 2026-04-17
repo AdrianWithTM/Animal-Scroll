@@ -6,6 +6,7 @@ let which = 0;
 let constant = 0;
 let lever;
 let isOnCooldown = false;
+let blocker = true;
 
 async function fetchDogData(){
 
@@ -76,37 +77,44 @@ async function fetchCatData() {
 function autoScroll() {
 
     console.log("clicked");
-    lever = document.getElementById("autoScrollText");
+    let lever = document.getElementById("autoScrollText");
 
     if(on === false){
         on = true;
+        blocker = true;
         lever.style.color = "white";
         lever.style.background = "hsl(187, 100%, 47%)";
-        document.getElementById("autoScrollText").innerHTML = "Auto Scroll: on";
+        lever.innerHTML = "Auto Scroll: on";
+
+        if(which === 0){
+            fetchDogData();
+            which = 1;
+        } else {
+            fetchCatData();
+            which = 0;
+        }
         constant = setInterval(function() {
-            console.log("5 seconds passed");
+            console.log("4 seconds passed");
+
             if(which === 0){
                 fetchDogData();
                 which = 1;
-            }else if(which === 1){
+            } else {
                 fetchCatData();
                 which = 0;
             }
+
         }, 4000);
-    }else{
+
+    } else {
         on = false;
+        blocker = false;
         lever.style.color = "lightgray";
         lever.style.background = "hsl(187, 100%, 39%)";
-        document.getElementById("autoScrollText").innerHTML = "Auto Scroll: off";
+        lever.innerHTML = "Auto Scroll: off";
         clearInterval(constant);
     }
-}
-    
-
-
-
-
-    
+} 
 
 
 
