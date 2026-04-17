@@ -75,7 +75,6 @@ async function fetchCatData() {
 
 function autoScroll() {
 
-    console.log("clicked");
     let lever = document.getElementById("autoScrollText");
 
     if(on === false){
@@ -92,7 +91,6 @@ function autoScroll() {
             which = 0;
         }
         constant = setInterval(function() {
-            console.log("4 seconds passed");
 
             if(which === 0){
                 fetchDogData();
