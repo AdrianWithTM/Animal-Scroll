@@ -1,6 +1,9 @@
 
 
 
+
+
+
 let dogFact = document.getElementById("Fact");
 let foxFact = document.getElementById("Fact");
 let catFact = document.getElementById("Fact");
@@ -104,6 +107,11 @@ function autoScroll() {
         clearInterval(constant);
     }
 }
+    
+
+
+
+
     
 
 
