@@ -6,7 +6,6 @@ let which = 0;
 let constant = 0;
 let lever;
 let isOnCooldown = false;
-let blocker = true;
 
 async function fetchDogData(){
 
@@ -81,7 +80,6 @@ function autoScroll() {
 
     if(on === false){
         on = true;
-        blocker = true;
         lever.style.color = "white";
         lever.style.background = "hsl(187, 100%, 47%)";
         lever.innerHTML = "Auto Scroll: on";
@@ -108,7 +106,6 @@ function autoScroll() {
 
     } else {
         on = false;
-        blocker = false;
         lever.style.color = "lightgray";
         lever.style.background = "hsl(187, 100%, 39%)";
         lever.innerHTML = "Auto Scroll: off";
