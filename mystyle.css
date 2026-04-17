@@ -191,7 +191,8 @@ input:hover {
     justify-content: flex-start;
     align-items: center;
     width: 610px;
-    height: 160px;
+    min-height: 160px;
+    max-height: auto;
     border-radius: 20px;
     border: #444444 4px solid;
     background-color: #75e3ff;
@@ -209,11 +210,12 @@ input:hover {
     text-shadow: 1px 1px #242424;
     font-weight: bold;
     text-align: center;
+    max-height: 200px;
 }
 
 .facttextcontainer{
     display: flex;
-    max-width: 580vh;
+    max-width: 580vh; 
 }
 
 
